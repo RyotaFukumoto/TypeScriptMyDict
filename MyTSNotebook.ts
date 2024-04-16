@@ -186,3 +186,49 @@ function dynamicType(): void {
 */
 // dynamicType();
 
+// プリマティブ型
+function showPrimitiveTypesExamples(): void {
+    // boolean型: 真偽値
+    let isDone: boolean = false;
+    console.log('Boolean example:', isDone);
+
+    // number型: 数値
+    let decimal: number = 6;
+    let hex: number = 0xf00d; // 16進数
+    let binary: number = 0b1010; // 2進数
+    let octal: number = 0o744; // 8進数
+    console.log('Number examples:', decimal, hex, binary, octal);
+
+    // string型: 文字列
+    let color: string = "blue";
+    color = 'red';
+    console.log('String example:', color);
+
+    // ローカル関数の定義と使用
+    function warnUser(): void {
+        console.log("This is my warning message");
+    }
+    warnUser();  // ネストされた関数の呼び出し
+
+    // null型: null値のみ可能
+    let u: null = null;
+    console.log('Null example:', u);
+
+    // undefined型: undefined値のみ可能
+    let n: undefined = undefined;
+    console.log('Undefined example:', n);
+
+    // object型: オブジェクト
+    let user: object = { name: "Hayes", id: 0 };
+    console.log('Object example:', user);
+
+    // アサーション: 型アサーション
+    let someValue: any = "this is a string";
+    let strLength: number = (someValue as string).length;
+    console.log('Assertion example:', strLength);
+}
+
+// メソッドを呼び出して実行
+showPrimitiveTypesExamples();
+
+
